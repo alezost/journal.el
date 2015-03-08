@@ -5,7 +5,6 @@
 ;; Author: Alex Kost <alezost@gmail.com>
 ;; Created: 15 Nov 2012
 ;; Version: 0.1
-;; URL: https://gitorious.org/alezost-emacs/journal
 ;; URL: https://github.com/alezost/journal.el
 ;; Keywords: convenience
 
@@ -82,7 +81,7 @@
 ;; ∞. Oof, I think that's all more or less.
 
 ;; This package optionally depends on "date-at-point" package
-;; <https://gitorious.org/alezost-emacs/date-at-point>.
+;; <https://gitlab.com/alezost-emacs/date-at-point>.
 
 ;; This package has nothing to do with
 ;; <https://github.com/bastibe/org-journal>.  It is a totally different
