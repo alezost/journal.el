@@ -284,13 +284,13 @@ Interactively, prompt for a described range."
     (journal-insert-entry start-date end-date (current-time))))
 
 (defun journal-position-windows (&optional buffer)
-  "Position notes buffer and journal BUFFER into 2 vertical windows.
+  "Position notes buffer and journal BUFFER into 2 windows.
 Notes buffer is a buffer visiting `journal-notes-file'.
 If BUFFER is nil, use a buffer with `journal-current-file'."
   (interactive)
   (find-file journal-notes-file)
   (delete-other-windows)
-  (split-window-horizontally)
+  (split-window-sensibly)
   (other-window 1)
   (if buffer
       (switch-to-buffer buffer)
