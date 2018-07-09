@@ -252,7 +252,7 @@ START-DATE, END-DATE, CREATED-TIME should be time values."
       (org-set-property journal-created-property-name
                         (journal-get-time-stamp created-time t))
       ;; Show properties, add subheading.
-      (show-entry)
+      (outline-show-entry)
       (re-search-forward org-property-end-re nil t)
       (insert "\n   ")
       (journal-insert-subheading))))
