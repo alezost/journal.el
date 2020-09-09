@@ -288,6 +288,7 @@ Interactively, prompt for a described range."
     (journal-position-windows (current-buffer))
     (journal-insert-entry start-date end-date (current-time))))
 
+;;;###autoload
 (defun journal-position-windows (&optional buffer)
   "Position notes buffer and journal BUFFER into 2 windows.
 Notes buffer is a buffer visiting `journal-notes-file'.
@@ -301,6 +302,7 @@ If BUFFER is nil, use a buffer with `journal-current-file'."
       (switch-to-buffer buffer)
     (find-file journal-current-file)))
 
+;;;###autoload
 (defun journal-insert-subheading ()
   "Insert subentry heading before the current line and prompt for tags."
   (interactive)
@@ -311,6 +313,7 @@ If BUFFER is nil, use a buffer with `journal-current-file'."
       (insert "**** "))
     (org-set-tags)))
 
+;;;###autoload
 (defun journal-insert-block ()
   "Insert block at point."
   (interactive)
