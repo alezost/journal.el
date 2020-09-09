@@ -125,6 +125,11 @@
   :type 'string
   :group 'journal)
 
+(defcustom journal-block-date-separator " — "
+  "String to insert before a date in an embedded block."
+  :type 'string
+  :group 'journal)
+
 (defcustom journal-late-time-seconds (* 3 60 60)
   "Number of seconds after midnight that counted as a previous date.
 For instance, if this variable is set to 3 hours (default), when
@@ -311,7 +316,7 @@ If BUFFER is nil, use a buffer with `journal-current-file'."
   (interactive)
   (insert journal-open-block)
   (save-excursion
-    (insert " – ")
+    (insert journal-block-date-separator)
     (org-insert-time-stamp (current-time) 't)
     (insert journal-close-block)))
 
